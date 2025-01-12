@@ -51,3 +51,45 @@
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=Project&message=Open%20Source&color=6AB04A&style=for-the-badge&logo=github&logoColor=white" alt="Open Source Project" />
 </p>
+
+
+- **OBJECTIVES 🎯:**
+    
+    The Board of Directors wants to understand the business performance of the company and its nationwide network, as well as evaluate the competency of Area Sales Managers.
+    
+- **FLOWCHART**
+    
+    ![FLOWCHART.drawio.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e5fbaa9-a716-4033-a6af-79713808500e/51eba1f3-2950-4202-8e87-41699deff901/FLOWCHART.drawio.png)
+    
+- **DATA COLLECTION:**
+    1. **File fact_kpi_month_raw_data:** Source data on card debt balances by customer as of the end of each month.
+    2. **File fact_txn_month_raw_data:** Source data of transactions recorded in the general ledger.
+    3. **File kpi_asm_data:** Data source on monthly business revenue by ASM (Area Sales Manager).
+    
+    - **Import CSV data:** 🗒️
+        
+        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e5fbaa9-a716-4033-a6af-79713808500e/880c937a-42c4-48df-a8ce-a513faac485b/image.png)
+        
+    
+
+- **Table:** 📔
+    
+    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e5fbaa9-a716-4033-a6af-79713808500e/3c3f7ee2-ba40-49aa-8a11-7a4faea2329e/image.png)
+    
+    *fact_kpi_month_raw_data*
+    
+    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e5fbaa9-a716-4033-a6af-79713808500e/6cd378af-0ca5-4580-9ba3-948191462ce0/image.png)
+    
+    *fact_txn_month_raw_data*
+    
+    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e5fbaa9-a716-4033-a6af-79713808500e/bd6411be-6197-4a01-8142-29ec478d4667/image.png)
+    
+    *code_account*
+    
+    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e5fbaa9-a716-4033-a6af-79713808500e/213d1fa0-0021-4133-9708-1030af188da4/image.png)
+    
+    *ma_khu_vuc*
+    
+    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e5fbaa9-a716-4033-a6af-79713808500e/39540ace-e80b-4a21-8b4f-9432288ebe4b/image.png)
+    
+    *kpi_asm_data*
