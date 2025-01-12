@@ -59,7 +59,7 @@
     
 - **FLOWCHART**
     
-    ![FLOWCHART.drawio.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e5fbaa9-a716-4033-a6af-79713808500e/51eba1f3-2950-4202-8e87-41699deff901/FLOWCHART.drawio.png)
+    ![FLOWCHART.drawio.png](https://github.com/Ngoc-Bich89/Bank-report/blob/main/FLOWCHART.drawio.png)
     
 - **DATA COLLECTION:**
     1. **File fact_kpi_month_raw_data:** Source data on card debt balances by customer as of the end of each month.
@@ -68,28 +68,69 @@
     
     - **Import CSV data:** 🗒️
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e5fbaa9-a716-4033-a6af-79713808500e/880c937a-42c4-48df-a8ce-a513faac485b/image.png)
+        ![image.png](https://github.com/Ngoc-Bich89/Bank-report/blob/main/chart/csv%20data.png)
         
     
 
 - **Table:** 📔
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e5fbaa9-a716-4033-a6af-79713808500e/3c3f7ee2-ba40-49aa-8a11-7a4faea2329e/image.png)
+    ![image.png](https://github.com/Ngoc-Bich89/Bank-report/blob/main/chart/fact_kpi_month_raw_data.png)
     
     *fact_kpi_month_raw_data*
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e5fbaa9-a716-4033-a6af-79713808500e/6cd378af-0ca5-4580-9ba3-948191462ce0/image.png)
+    ![image.png](https://github.com/Ngoc-Bich89/Bank-report/blob/main/chart/fact_txn_month_raw_data.png)
     
     *fact_txn_month_raw_data*
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e5fbaa9-a716-4033-a6af-79713808500e/bd6411be-6197-4a01-8142-29ec478d4667/image.png)
+    ![image.png](https://github.com/Ngoc-Bich89/Bank-report/blob/main/chart/kpi_asm_data.png)
+    
+    *kpi_asm_data*
+
+- **DATA MODELING AND ETL 📔:** 
+    
+    Use **PLSQL Programming** to write a **Stored Procedure.**.
+    
+    Develop a Stored Procedure with an input parameter for the report month in the format `'YYYYMM'`. The procedure should:
+    
+    1. Retrieve data from the three input tables:
+        - `fact_txn_month_raw_data`,
+        - `fact_kpi_month_raw_data`,
+        - and `fact_kpi_month_raw_data`.
+    2. Combine this data with existing `dim` and `fact` tables through data processing steps to populate the target tables:
+        - `report_tong_hop` (Bank Business Report)
+        - and `asm_report` (ASM Report).
+      
+    Built Dim Table
+  
+    ![image.png](https://github.com/Ngoc-Bich89/Bank-report/blob/main/chart/code_account.png)
     
     *code_account*
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e5fbaa9-a716-4033-a6af-79713808500e/213d1fa0-0021-4133-9708-1030af188da4/image.png)
+    ![image.png](https://github.com/Ngoc-Bich89/Bank-report/blob/main/chart/ma_khu_vuc.png)
     
     *ma_khu_vuc*
+
+After that, build additional physical tables as intermediate steps to lead to the final report.
+
+    ![image.png](https://github.com/Ngoc-Bich89/Bank-report/blob/main/chart/report_asm.jpg)
+    *report_asm*
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e5fbaa9-a716-4033-a6af-79713808500e/39540ace-e80b-4a21-8b4f-9432288ebe4b/image.png)
+    ![image.png](https://github.com/Ngoc-Bich89/Bank-report/blob/main/chart/report_tong_hop.jpg)
+    *report_tong_hop*
     
-    *kpi_asm_data*
+- **DATA VISUALIZATION🖼️:** 
+See details in the **Embedded Demo with Power BI**: [Visual Chart](https://app.powerbi.com/view?r=eyJrIjoiMzMxZjAwZWYtYWNmMC00MGNhLWEyOTktODI5ZDYwYjcxZmUxIiwidCI6IjZhYzJhZDA2LTY5MmMtNDY2My1iN2FmLWE5ZmYyYTg2NmQwYyIsImMiOjEwfQ%3D%3D)
+
+1. Use **Power BI** to connect to the database via **Direct Query**. [Visual Chart](https://app.powerbi.com/view?r=eyJrIjoiMzMxZjAwZWYtYWNmMC00MGNhLWEyOTktODI5ZDYwYjcxZmUxIiwidCI6IjZhYzJhZDA2LTY5MmMtNDY2My1iN2FmLWE5ZmYyYTg2NmQwYyIsImMiOjEwfQ%3D%3D)
+2. Visualize and analyze the **business performance of regions** and assess the **capabilities of personnel (ASM)** as of **March 2023**.
+
+    **BUSINESS BANKING REPOPRT**: (refer to the Embedded Demo with Power BI above).
+
+    **ASM REPORT**:
+
+![image](https://github.com/Ngoc-Bich89/Bank-report/blob/main/chart/Financial_Report.jpg?raw=true)
+Overview of Revenue, Expenses, and Profit by Region Across Months
+![image](https://github.com/Ngoc-Bich89/Bank-report/blob/main/chart/Revenue%26Expense.jpg?raw=true)
+Details of Revenue and Expense Components by Region
+![image](https://github.com/Ngoc-Bich89/Bank-report/blob/main/chart/Sale_Report.jpg?raw=true)
+Report on the Evaluation of Employee Performance Effectiveness
